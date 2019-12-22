@@ -1,0 +1,8 @@
+.char > img {
+  width: 100px;
+}
+
+.page {
+  display: block;
+  list-style-type: none;
+}

@@ -1,0 +1,20 @@
+.backButton {
+  vertical-align: sub;
+}
+
+.addInfo {
+  margin-bottom: 5px;
+}
+
+.cast {
+  display: inline;
+  padding-right: 10px;
+}
+
+.review {
+  display: inline;
+  padding-right: 10px;
+  position: absolute;
+  top: 438px;
+  left: 40px;
+}

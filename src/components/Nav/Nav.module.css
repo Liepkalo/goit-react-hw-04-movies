@@ -1,0 +1,21 @@
+.items {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.item {
+  padding: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  color: red;
+}
