@@ -69,14 +69,6 @@ class MovieDetailsPage extends Component {
 
     const { match, location } = this.props;
 
-    const WrappedCast = function(props) {
-      return <Cast {...props} cast={cast} />;
-    };
-
-    const WrappedReview = function(props) {
-      return <Review {...props} review={review} />;
-    };
-
     return (
       <div>
         <button
@@ -93,7 +85,7 @@ class MovieDetailsPage extends Component {
 
         <Link
           to={{
-            pathname: `/movies/${match.params.movieId}/cast`,
+            pathname: `${match.url}/cast`,
 
             state: {
               from: { ...location, search },
@@ -104,11 +96,11 @@ class MovieDetailsPage extends Component {
           Cast
         </Link>
 
-        <Route path="/movies/:movieId/cast" component={WrappedCast} />
+        <Route path={`${match.path}/cast`} component={Cast} />
 
         <Link
           to={{
-            pathname: `/movies/${match.params.movieId}/review`,
+            pathname: `${match.url}/review`,
 
             state: {
               from: { ...location, search },
@@ -119,7 +111,7 @@ class MovieDetailsPage extends Component {
           Review
         </Link>
 
-        <Route path="/movies/:movieId/review" component={WrappedReview} />
+        <Route path={`${match.path}/review`} component={Review} />
       </div>
     );
   }
